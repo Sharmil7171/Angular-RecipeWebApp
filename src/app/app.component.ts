@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Recipe';
+  recipeDisplay = true;
+
+  getDisplayPage(page:string){
+    if(page === "Recipe"){
+      this.recipeDisplay = true;
+    } else if(page === "ShoppingList"){
+      this.recipeDisplay = false;
+    }
+  }
 }

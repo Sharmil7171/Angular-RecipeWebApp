@@ -1,2 +1,8 @@
-<app-header></app-header>
-<app-recipes></app-recipes>
+<app-header (selectedPage)="getDisplayPage($event)"></app-header>
+<div *ngIf="recipeDisplay">
+    <app-recipes></app-recipes>
+</div>
+
+<div *ngIf="!recipeDisplay">
+    <app-shopping-list></app-shopping-list>
+</div>
